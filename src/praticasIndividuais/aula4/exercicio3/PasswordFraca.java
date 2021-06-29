@@ -1,15 +1,8 @@
-package praticasIndividuais.aula4.exercicio3.ex1;
-
-import java.util.regex.PatternSyntaxException;
+package praticasIndividuais.aula4.exercicio3;
 
 public class PasswordFraca extends Password {
 
-    @Override
-    void validarSenha(String senha) {
-        String pattern = "(?=.*[a-z])";
-
-        if (!senha.matches(pattern)) {
-            throw new RuntimeException("Senha não coincide com o padrao de senha fraca");
-        }
+    public PasswordFraca() {
+        super("(\\d{4},\\d{4})", "Fraca");
     }
 }

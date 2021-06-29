@@ -1,7 +1,21 @@
-package praticasIndividuais.aula4.exercicio3.ex1;
+package praticasIndividuais.aula4.exercicio3;
 
 public  abstract class Password {
-    private String Senha;
+    private String pattern;
+    private String tipoSenha;
 
-    abstract void validarSenha(String senha);
+    public Password(String pattern, String tipoSenha) {
+        this.pattern = pattern;
+        this.tipoSenha = tipoSenha;
+    }
+
+    public String getPattern() {
+        return pattern;
+    }
+
+    public void validarSenha(String senha) {
+        if (!senha.matches(this.pattern)) {
+            throw new RuntimeException("Senha não atende os requisitos necessários para a senha "+this.tipoSenha);
+        }
+    }
 }

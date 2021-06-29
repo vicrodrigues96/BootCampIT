@@ -1,12 +1,8 @@
-package praticasIndividuais.aula4.exercicio3.ex1;
+package praticasIndividuais.aula4.exercicio3;
 
 public class PasswordMedia extends Password{
-    @Override
-    void validarSenha(String senha) {
-        String pattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}";
 
-        if (!senha.matches(pattern)) {
-            throw new RuntimeException("Senha não coincide com o padrao de senha média");
-        }
+    public PasswordMedia() {
+        super("((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{6,}))", "Media");
     }
 }
