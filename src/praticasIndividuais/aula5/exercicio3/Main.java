@@ -11,10 +11,7 @@ public class Main {
         Axe axe = new Axe("Physical", "Stonecutter Axe");
         Crossbow crossbow = new Crossbow("Distance", "Royal Crossbow");
 
-        Character character = new Character("Sniper expert",
-                                           "Paladin",
-                                           300,
-                                                  crossbow);
+        Character character = new Character("Sniper expert", "Paladin", 300, crossbow);
 
         character.getWeapon().attack();
         character.getWeapon().increasePower();
