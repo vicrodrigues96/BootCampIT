@@ -17,7 +17,7 @@ public class Main {
         corrida.socorrerCarro("fhk333");
         corrida.getSocorristaCarro().socorrer(corrida.encontrarVeiculoPorPlaca("222"));
 
-        corrida.socorrerCarro("222");
-        corrida.getSocorristaCarro().socorrer(corrida.encontrarVeiculoPorPlaca("222"));
+        corrida.socorrerMotocicleta("222");
+        corrida.getSocorristaMoto().socorrer(corrida.encontrarVeiculoPorPlaca("222"));
     }
 }
